@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Inventaire Colorants</h1>
+
+<p *ngIf="!inventaireColorants?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="inventaireColorants.length">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Quantité</th>
+      <th>SKU</th>
+      <th>Nom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let inventaireColorant of inventaireColorants">
+      <td>{{ inventaireColorant.date }}</td>
+      <td>{{ inventaireColorant.quantite }}</td>
+      <td>{{ inventaireColorant.sku }}</td>
+      <td>{{ inventaireColorant.nom }}</td>
+    </tr>
+  </tbody>
+</table>
